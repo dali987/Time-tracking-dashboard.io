@@ -1,6 +1,6 @@
 const timespanButtons = Array.from(document.querySelector(".timespan-buttons").children);
 const hourLabels = Array.from(document.querySelectorAll(".content"));
-const cells = Array.from(document.querySelectorAll(".cell:not(.profile)"));
+const cells = Array.from(document.querySelectorAll(".cell"));
 const previousTimespanLabels = {
     "daily" : "Yasterday",
     "weekly" : "Last week",
