@@ -10,6 +10,7 @@
     --grey-purple: hsl(235, 45%, 61%);
     --dark-blue-purple: hsl(235, 46%, 20%);
     --dark-blue: hsl(226, 43%, 10%);
+    --hover-bg: hsl(236, 41%, 34%); /*i had to get the color in hex and trasfer it into hs... idk why they didnt give us this color ;-;*/
 }
 
 *{
@@ -51,10 +52,16 @@ body{
     -o-border-radius: 20px;
 }
 /* cells other than the main one */
-.cell:not(.profile){ 
+.cell:not(.profile){
+    opacity: 0;
     background-repeat: no-repeat;
     background-position: calc(100% - 20px) var(--offset), center;
     display: flex;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
 }
 
 .profile{
@@ -128,7 +135,18 @@ h2{
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
+    transition: 0.35s;
+    -webkit-transition: 0.35s;
+    -moz-transition: 0.35s;
+    -ms-transition: 0.35s;
+    -o-transition: 0.35s;
 }
+.cell .content:hover{
+    background-color: var(--hover-bg);
+    cursor: pointer;
+}
+
+/* as you can see im a fan of background image*/
 .cell .content span{
     font-size: 1.15rem;
     color: white;
@@ -147,6 +165,9 @@ h2{
     margin-top: 30px;
     margin-bottom: 10px;
 }
+
+/*i saw a vid about how to do socials hover effect and it used this method where you do a non existant var and define it in the element's style so each  one has its color
+also i didnt do an img cuz it will add 6 more elements (since we have 6 cards) so i just used the background img for that with the help of chatgpt*/
 .work{
     grid-area: work;
     background-image: url(images/icon-work.svg), linear-gradient(to bottom, var(--bg-color) 20%, transparent) ;
@@ -175,6 +196,11 @@ h2{
 .profile .timespan-buttons .active{
     color: white;
 }
+.cell.show{
+    opacity: 1;
+}
+
+/* media queries also yes its desktop first cuz i was too lazy making it mobile first*/
 @media screen and (max-width: 1140px){
     .container{
         grid-template-columns: repeat(3, 16rem);
