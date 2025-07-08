@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time tracking dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Young+Serif&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="container">
+        <section class="cell profile">
+            <div class="info">
+                <img src="images/image-jeremy.png" alt="" class="info-img">
+                <div class="info-name">
+                    <p>Report for</p>
+                    <h2 class="name">Jeremy Robson</h2>
+                </div>
+            </div>
+            <div class="timespan-buttons">
+                <button class="active" id="daily">Daily</button>
+                <button id="weekly">Weekly</button>
+                <button id="monthly">Monthly</button>
+            </div>
+        </section>
+        <section class="cell hour-label work" style="--bg-color: var(--orange); --offset: -10px">
+            <div class="content" id="work">
+                <span>Work</span>
+                <h1 class="current">100hrs</h1>
+                <p class="previous">Yasterday - 120</p>
+                
+            </div>
+        </section>
+        <section class="cell hour-label exercise " style="--bg-color: var(--green); --offset: -2px;">
+            <div class="content" id="exercise">
+                <span>Exercise</span>
+                <h1 class="current">100hrs</h1>
+                <p class="previous">Yasterday - 120</p>
+            </div>
+        </section>
+        <section class="cell hour-label play" style="--bg-color: var(--blue); --offset: -5px;">
+            <div class="content" id="play">
+                <span>Play</span>
+                <h1 class="current">100hrs</h1>
+                <p class="previous">Yasterday - 120</p>
+            </div>
+        </section>
+        <section class="cell hour-label social" style="--bg-color: var(--purple-pink); --offset: -5px;">
+            <div class="content" id="social">
+                <span>Social</span>
+                <h1 class="current">100hrs</h1>
+                <p class="previous">Yasterday - 120</p>
+            </div>
+        </section>
+        <section class="cell hour-label study" style="--bg-color: var(--pink); --offset: -6px;">
+            <div class="content" id="study">
+                <span>Study</span>
+                <h1 class="current">100hrs</h1>
+                <p class="previous">Yasterday - 120</p>
+            </div>
+        </section>
+        <section class="cell hour-label self-care" style="--bg-color: var(--yellow); --offset: -6px;">
+            <div class="content" id="self-care">
+                <span>Self Care</span>
+                <h1 class="current">100hrs</h1>
+                <p class="previous">Yasterday - 120</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
