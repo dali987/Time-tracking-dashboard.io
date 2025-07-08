@@ -45,6 +45,7 @@ body{
 }
 .cell{
     overflow: hidden;
+    opacity: 0;
     border-radius: 20px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
@@ -53,20 +54,24 @@ body{
 }
 /* cells other than the main one */
 .cell:not(.profile){
-    opacity: 0;
     background-repeat: no-repeat;
     background-position: calc(100% - 20px) var(--offset), center;
     display: flex;
-    transition: 0.4s;
-    -webkit-transition: 0.4s;
-    -moz-transition: 0.4s;
-    -ms-transition: 0.4s;
-    -o-transition: 0.4s;
+    transition: 1.8s;
+    -webkit-transition: 1.8s;
+    -moz-transition: 1.8s;
+    -ms-transition: 1.8s;
+    -o-transition: 1.8s;
 }
 
 .profile{
     background-color: var(--dark-blue-purple);
     grid-area: profile;
+    transition: 0.35s;
+    -webkit-transition: 0.35s;
+    -moz-transition: 0.35s;
+    -ms-transition: 0.35s;
+    -o-transition: 0.35s;
 }
 .profile .info{
     width: 100%;
