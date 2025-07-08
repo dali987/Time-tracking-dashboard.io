@@ -19,7 +19,7 @@ const handleToggle = (timespan) =>{
     })
 }
 
-fetch("/10.Time_tracking_dashboard/data.json").then((response) =>{
+fetch("/data.json").then((response) =>{
     if (!response.ok) {
       throw new Error(`HTTP error: ${response.status}`);
     }
